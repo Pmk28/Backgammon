@@ -9,6 +9,9 @@ class Kostka:
 
 
 class Dvojkostka(Kostka):
+    def __init__(self):
+        super().__init__()
+
     def hod_dvojice(self):
         x = self.hod()
         y = self.hod()
