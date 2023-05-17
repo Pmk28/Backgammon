@@ -5,25 +5,14 @@ class Herni_pole:
 
     
 
-    def __init__(self,pole):
+    def __init__(self,pole,obsah):
         self.pole = pole
-        self.obsah_pole = []
+        self.obsah_pole = obsah
         
         
-    def rozrad_kameny_do_poli():
-        pole6.obsah_pole.extend([kamen1_cerny,kamen2_cerny,kamen3_cerny,kamen4_cerny,kamen5_cerny]) 
-        pole8.obsah_pole.extend([kamen6_cerny,kamen7_cerny,kamen8_cerny])
-        pole13.obsah_pole.extend([kamen9_cerny,kamen10_cerny,kamen11_cerny,kamen12_cerny,kamen13_cerny])
-        pole24.obsah_pole.extend([kamen14_cerny,kamen15_cerny])
-        pole1.obsah_pole.extend([kamen14_bily,kamen15_bily])
-        pole12.obsah_pole.extend([kamen9_bily,kamen10_bily,kamen11_bily,kamen12_bily,kamen13_bily])
-        pole17.obsah_pole.extend([kamen6_bily,kamen7_bily,kamen8_bily])
-        pole19.obsah_pole.extend([kamen1_bily,kamen2_bily,kamen3_bily,kamen4_bily,kamen5_bily])
-    def najdi_kamen(kamen):
-       pole_list = [pole1,pole2,pole3,pole4,pole5,pole6,pole7,pole8,pole9,pole10,pole11,pole12,pole13,pole14,pole15,pole16,pole17,pole18,pole19,pole20,pole21,pole22,pole23,pole24]
-       for p in pole_list:
-            if kamen in p.obsah_pole:
-                return p.pole
+   
+        
+    
                
            
         
@@ -31,33 +20,38 @@ class Herni_pole:
 
 
 
-pole1 = Herni_pole(1)
-pole2 = Herni_pole(2)
-pole3 = Herni_pole(3)
-pole4 = Herni_pole(4)
-pole5 = Herni_pole(5)
-pole6 = Herni_pole(6)
+pole1 = Herni_pole(1,["01"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," B"," B"])
+pole2 = Herni_pole(2,["02"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole3 = Herni_pole(3,["03"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole4 = Herni_pole(4,["04"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole5 = Herni_pole(5,["05"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole6 = Herni_pole(6,["06"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," C"," C"," C"," C"," C"])
 
 
-pole7 = Herni_pole(7)
-pole8 = Herni_pole(8)
-pole9 = Herni_pole(9)
-pole10 = Herni_pole(10)
-pole11 = Herni_pole(11)
-pole12 = Herni_pole(12)
+pole7 = Herni_pole(7,["07"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole8 = Herni_pole(8,["08"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," C"," C"," C"])
+pole9 = Herni_pole(9,["09"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole10 = Herni_pole(10,["10"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole11 = Herni_pole(11,["11"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole12 = Herni_pole(12,["12"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," B"," B"," B"," B"," B"])
 
-pole13 = Herni_pole(13)
-pole14 = Herni_pole(14)
-pole15 = Herni_pole(15)
-pole16 = Herni_pole(16)
-pole17 = Herni_pole(17)
-pole18 = Herni_pole(18)
+pole13 = Herni_pole(13,["13"," C"," C"," C"," C"," C"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole14 = Herni_pole(14,["14"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole15 = Herni_pole(15,["15"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole16 = Herni_pole(16,["16"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole17 = Herni_pole(17,["17"," B"," B"," B"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole18 = Herni_pole(18,["18"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
 
-pole19 = Herni_pole(19)
-pole20 = Herni_pole(20)
-pole21 = Herni_pole(21)
-pole22 = Herni_pole(22)
-pole23 = Herni_pole(23)
-pole24 = Herni_pole(24)
+pole19 = Herni_pole(19,["19"," B"," B"," B"," B"," B"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole20 = Herni_pole(20,["20"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole21 = Herni_pole(21,["21"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole22 = Herni_pole(22,["22"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole23 = Herni_pole(23,["23"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
+pole24 = Herni_pole(24,["24"," C"," C"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"," -"])
 
-seznam_poli = [pole1.obsah_pole, pole2.obsah_pole, pole3.obsah_pole, pole4.obsah_pole, pole5.obsah_pole, pole6.obsah_pole, pole7.obsah_pole, pole8.obsah_pole, pole9.obsah_pole, pole10.obsah_pole, pole11.obsah_pole, pole12.obsah_pole, pole13.obsah_pole, pole14.obsah_pole, pole15.obsah_pole, pole16.obsah_pole, pole17.obsah_pole, pole18.obsah_pole, pole19.obsah_pole, pole20.obsah_pole, pole21.obsah_pole, pole22.obsah_pole, pole23.obsah_pole, pole24.obsah_pole]
+BAR_C = ["BAR_C","    -","    -","    -","    -","    -","    -","    -","    -","    -","    -","    -","    -","    -","    -","    -"]
+BAR_B = ["BAR_B","    -","    -","    -","    -","    -","    -","    -","    -","    -","    -","    -","    -","    -","    -","    -"]
+
+seznam_poli = [pole13.obsah_pole, pole14.obsah_pole, pole15.obsah_pole, pole16.obsah_pole, pole17.obsah_pole, pole18.obsah_pole,BAR_C ,pole19.obsah_pole, pole20.obsah_pole, pole21.obsah_pole, pole22.obsah_pole, pole23.obsah_pole, pole24.obsah_pole, pole12.obsah_pole, pole11.obsah_pole, pole10.obsah_pole, pole9.obsah_pole, pole8.obsah_pole, pole7.obsah_pole,BAR_B,pole6.obsah_pole, pole5.obsah_pole, pole4.obsah_pole, pole3.obsah_pole, pole2.obsah_pole, pole1.obsah_pole]
+
+
