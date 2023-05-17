@@ -10,8 +10,9 @@ class Kostka:
 
 class Dvojkostka(Kostka):
     def hod_dvojice(self):
-        return (self.hod(), self.hod())
-
-    def hod_ctverice(self):
-        return (self.hod(), self.hod(), self.hod(), self.hod())
-
+        x = self.hod()
+        y = self.hod()
+        if x != y:
+          return (x , y)  
+        else: 
+            return ( x, x, x, x)
