@@ -1,47 +1,54 @@
-from herni_pole import *
+from spike import *
+from bar import *
+from kostka import *
 
 
 class Konzolovy_Hrac:
+
     def __init__(self,kamen):
+        
         self.kamen = kamen
+        
 
     def tah(self):
-        Herni_pole.rozrad_kameny_do_poli()
-        
-        if self.kamen == "Bílý":
-            hratelne_kameny = []
-            for pole in seznam_poli:
-                
-                for kamen in pole:
-                    
-                    if kamen.barva == "bily":
-                        hratelne_kameny.append(f"kamen: {kamen.nazev} pole: {Herni_pole.najdi_kamen(kamen)}")
-            
-
-            obsah_pole =  []
-            pole_list = [pole1,pole2,pole3,pole4,pole5,pole6,pole7,pole8,pole9,pole10,pole11,pole12,pole13,pole14,pole15,pole16,pole17,pole18,pole19,pole20,pole21,pole22,pole23,pole24]
-            for p in pole_list:
-                obsah_pole.append(f"Pole{p.pole}: {[kamen.nazev for kamen in p.obsah_pole]}")
-
-
-            print(f"Hratelné kameny a v jakých polích se nacházejí: {hratelne_kameny}")
-            print("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
-            print(f"Všechna pole a jejich obsah: {obsah_pole}")
-            k = input("S jakým hratelným kamenem chceš pohnout? Napiš název kamene: ")
-            p = input("Na jaké pole ho chceš přesunout?: (1-24)")
-
-        
-
-
-
-
-
-
-
-        
-
+        dvojkostka = Dvojkostka()
+        hod = input("Zmáčkni mezerník a pak enter pro hod dvojicí kostek: ")
+        if hod == " ":
+            if len(dvojkostka.hod_dvojice()) == 2:
+                pole = int(input("Napiš číslo pole: "))
+                kamen = int(input("Napiš číslo kamene se kterým chceš pohnout(číslování od 0 odshora dolů): "))
+                tah = int(input(f"{dvojkostka.hod_dvojice()[0]}, {dvojkostka.hod_dvojice()[1]}"))
+                if tah in  [i for i in range(1,7)]:
+                    for i in Spike.seznam[pole].kameny:
+                        if i == kamen:
+                            pass
+                else:
+                    pass
+            else:
+                pass
         else:
             pass
+        
+
+
+        
+        
+    
+    def vyhod_z_baru(self):
+        
+
+        pass
+            
+
+        
+
+
+
+
+
+
+
+        
 
 class AI_Hrac:
 
@@ -49,11 +56,14 @@ class AI_Hrac:
         self.kamen = kamen
 
     def tah(self):
-
+        dvojkostka = Dvojkostka()
+        pass
+        
+    def vyhod_z_baru(self):
         pass
 
 
-seznam_poli = [pole1.obsah_pole, pole2.obsah_pole, pole3.obsah_pole, pole4.obsah_pole, pole5.obsah_pole, pole6.obsah_pole, pole7.obsah_pole, pole8.obsah_pole, pole9.obsah_pole, pole10.obsah_pole, pole11.obsah_pole, pole12.obsah_pole, pole13.obsah_pole, pole14.obsah_pole, pole15.obsah_pole, pole16.obsah_pole, pole17.obsah_pole, pole18.obsah_pole, pole19.obsah_pole, pole20.obsah_pole, pole21.obsah_pole, pole22.obsah_pole, pole23.obsah_pole, pole24.obsah_pole]
+
 
 
 
