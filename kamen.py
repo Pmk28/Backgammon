@@ -31,4 +31,4 @@ class Kamen:
             kamen_black = Kamen("black",i)
             Kamen.seznam.append(kamen_black)
 
-Kamen.vytvor_kameny()
+

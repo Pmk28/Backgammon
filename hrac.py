@@ -15,14 +15,23 @@ class Konzolovy_Hrac:
     def tah_2(self):
         pole = int(input("Napiš číslo pole: "))
         kamen = int(input("Napiš číslo kamene: "))
-        for sutr in Spike.seznam[pole - 1].kameny:
-            
-            if self.kamen == "white" and sutr.barva == "white":
+        if Spike.seznam[pole - 1].kameny[kamen] != "-":
+            if self.kamen == "white" and Spike.seznam[pole - 1].kameny[kamen]== "white":
                 pass
-            elif self.kamen == "black" and sutr.barva == "black":
+            elif self.kamen == "black" and Spike.seznam[pole - 1].kameny[kamen] == "black":
                 pass
             else:
-                pass
+                print("Můžeš ovládat pouze kameny své barvy!")
+                time.sleep(1)
+                print("Vyber jiný kámen!")
+                self.tah_2()
+
+                
+        else:
+            print("Na této pozici kámen není!")
+            time.sleep(1)
+            print("Vybírej znovu!")
+            self.tah_2()
 
         
 
@@ -49,6 +58,7 @@ class Konzolovy_Hrac:
         if hod == " ":
             if len(self.x) == 2:
                 print(f"Hodil si čísla {self.x[0]} a {self.x[1]}!")
+                time.sleep(1)
                 self.tah_2()
             else:
                 print(f"Hodil si čísla {self.x[0]} a {self.x[1]}!")

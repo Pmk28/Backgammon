@@ -36,4 +36,4 @@ class Spike:
              
              
 
-Spike.vytvorit()
+
