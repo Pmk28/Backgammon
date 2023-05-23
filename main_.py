@@ -16,6 +16,8 @@ class Hra():
         self.kostka = Kostka()
         
     def start(self):
+        Spike.vytvorit()
+        Kamen.vytvor_kameny()
         hra.vypis()
         hra.prirazeni_hracu()
         hod = input("Zmáčkni mezerník a pak enter pro počáteční hod kostkou: ")
