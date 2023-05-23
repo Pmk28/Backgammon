@@ -27,7 +27,7 @@ class Kamen:
         for i in range(1,16):
             kamen_white = Kamen("white",i)
             Kamen.seznam.append(kamen_white)
-        for i in range (1,16):
+        for i in range (16,31):
             kamen_black = Kamen("black",i)
             Kamen.seznam.append(kamen_black)
 
