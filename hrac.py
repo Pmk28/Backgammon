@@ -1,6 +1,7 @@
 from spike import *
 from bar import *
 from kostka import *
+import time
 
 
 class Konzolovy_Hrac:
@@ -10,35 +11,36 @@ class Konzolovy_Hrac:
         self.kamen = kamen
         
 
-    def tah(self):
-        dvojkostka = Dvojkostka()
-        hod = input("Zmáčkni mezerník a pak enter pro hod dvojicí kostek: ")
-        if hod == " ":
-            if len(dvojkostka.hod_dvojice()) == 2:
-                pole = int(input("Napiš číslo pole: "))
-                kamen = int(input("Napiš číslo kamene se kterým chceš pohnout(číslování od 0 odshora dolů): "))
-                tah = int(input(f"{dvojkostka.hod_dvojice()[0]}, {dvojkostka.hod_dvojice()[1]}"))
-                if tah in  [i for i in range(1,7)]:
-                    for i in Spike.seznam[pole].kameny:
-                        if i == kamen:
-                            pass
-                else:
-                    pass
-            else:
-                pass
-        else:
-            pass
+    def tah_2(self):
         
+        pass
 
 
         
-        
+    def tah_4(self):
+
+        pass
     
     def vyhod_z_baru(self):
         
 
         pass
-            
+
+    def hod_dvojkostkou(self):
+        dvojkostka = Dvojkostka()
+        hod = input("Zmáčkni mezerník a pak enter pro hod dvojicí kostek: ")
+        if hod == " ":
+            if len(dvojkostka.hod_dvojice()) == 2:
+                print(f"Hodil si čísla {dvojkostka.hod_dvojice()[0]} a {dvojkostka.hod_dvojice()[1]}!")
+                self.tah_2()
+            else:
+                print(f"Hodil si čísla {dvojkostka.hod_dvojice()[0]} a {dvojkostka.hod_dvojice()[1]}!")
+                time.sleep(1)
+                print("Hodil si 2 stejná čísla, můžeš tedy táhnout čtyřikrát!")
+                self.tah_4()
+        else:
+            pass
+        
 
         
 

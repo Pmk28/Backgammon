@@ -7,32 +7,31 @@ import time
 
 class Hra():
 
-    hernipole = np.array(herni_pole.seznam_poli)
-    kostka = Kostka()
-    hrac1 = None
-    hrac2 = None
-
     def __init__(self):
 
-        pass
+        self.hrac1 = None
+        self.hrac2 = None
+
+        self.herni_pole = np.array(herni_pole.seznam_poli)
+        self.kostka = Kostka()
         
-    def start():
-        Hra.vypis()
-        Hra.prirazeni_hracu()
+    def start(self):
+        hra.vypis()
+        hra.prirazeni_hracu()
         hod = input("Zmáčkni mezerník a pak enter pro počáteční hod kostkou: ")
         if hod == " ":
-            Hra.hody_kostkou()
+            hra.hody_kostkou()
         else:
             pass
 
 
-    def vypis():
+    def vypis(self):
         print("-----------------------------------------------------")
         for i in range(16):
         
             print("|", end=' ')
 
-            for row in Hra.hernipole[:13]:
+            for row in self.herni_pole[:13]:
             
                 print(row[i], end=' ')
 
@@ -47,7 +46,7 @@ class Hra():
         
             print("|", end=' ')
 
-            for row in Hra.hernipole[13:]:
+            for row in self.herni_pole[13:]:
             
                 print(row[n], end=' ')
 
@@ -56,43 +55,43 @@ class Hra():
 
             print("|")
         print("-----------------------------------------------------")
-    def prirazeni_hracu():
+    def prirazeni_hracu(self):
         barva = input("Zmáčkni mezerník a pak enter pro výběr bílých kamenů nebo pouze enter pro výběr černých kamenů: ")
         if barva == " ":
-            Hra.hrac1 = Konzolovy_Hrac("white")
-            Hra.hrac2 = AI_Hrac("black")
+            self.hrac1 = Konzolovy_Hrac("white")
+            self.hrac2 = AI_Hrac("black")
             time.sleep(1)
             print("Hraješ tedy s bílými kameny a tvůj soupeř s černými!")
         else:
-            Hra.hrac1 = Konzolovy_Hrac("black")
-            Hra.hrac2 = AI_Hrac("white")
+            self.hrac1 = Konzolovy_Hrac("black")
+            self.hrac2 = AI_Hrac("white")
             print("Hraješ tedy s černými kameny a tvůj soupeř s bílými!")
 
-    def hody_kostkou():
-        x = Hra.kostka.hod()
-        y = Hra.kostka.hod()
+    def hody_kostkou(self):
+        x = self.kostka.hod()
+        y = self.kostka.hod()
         print(f"Hodil si {x} a tvůj soupeř hodil {y}")
         if x > y:
             time.sleep(1)
             print("Začínáš s prvním tahem!")
-            Hra.hrac1.tah()
+            self.hrac1.hod_dvojkostkou()
         elif x == y:
             time.sleep(1)
             print("Hodili jste stejné číslo, házíte znovu!")
             time.sleep(1)
-            Hra.hody_kostkou()
+            self.hody_kostkou()
         else:
             time.sleep(1)
             print("Tvůj soupeř začíná s prvním tahem!")
-            Hra.hrac2.tah()
+            self.hrac2.tah()
 
 
      
     
 
         
-
-Hra.start()
+hra = Hra()
+hra.start()
 
 
 
